@@ -1,12 +1,12 @@
-require("./db/connect");
+require("./database/connect");
 const express = require("express");
 const app = express();
 const tasks = require("./routes/tasks");
-const connectDB = require("./db/connect");
+const connectDB = require("./database/connect");
 require("dotenv").config();
-const notFound = require("./middleware/not-found");
+const notFound = require("./middleware/notFound");
 //middleware
-app.use(express.static("./public"));
+app.use(express.static("./main"));
 app.use(express.json());
 
 //routes
